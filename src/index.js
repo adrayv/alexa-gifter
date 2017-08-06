@@ -1,3 +1,4 @@
+var Alexa = require('alexa-sdk');
 var rp = require('request-promise');
 
 // ----- basic URL build -----
@@ -16,6 +17,15 @@ const param_lang = "&lang=en";
 var response = undefined;
 var numGifs = undefined; // how many gifs were returned
 var statusCode = undefined;
+
+exports.handler = function (event, context, callback) {
+	var alexa = Alexa.handler(event, context);
+	alexa.registerHandlers(newSessionHandler);
+	alexa.execute();
+};
+
+var newSessionHandler = {
+}
 
 param_query += "family guy";
 param_limit += 11;

@@ -1,0 +1,276 @@
+{
+	"intents": [{
+		"intent": "AMAZON.HelpIntent",
+		"slots": []
+	}, {
+		"intent": "getGifIntent",
+		"slots": [
+			{
+				"name": "ACTOR",
+				"type": "AMAZON.Actor"
+			},
+			{
+				"name": "RATING",
+				"type": "AMAZON.AggregateRating"
+			},
+			{
+				"name": "AIRLINE",
+				"type": "AMAZON.Airline"
+			},
+			{
+				"name": "ANIMAL",
+				"type": "AMAZON.Animal"
+			},
+			{
+				"name": "ARTIST",
+				"type": "AMAZON.Artist"
+			},
+			{
+				"name": "ATHLETE",
+				"type": "AMAZON.Athlete"
+			},
+			{
+				"name": "AUTHOR",
+				"type": "AMAZON.Author"
+			},
+			{
+				"name": "BOOK",
+				"type": "AMAZON.Book"
+			},
+			{
+				"name": "BOOK_SERIES",
+				"type": "AMAZON.Book"
+			},
+			{
+				"name": "BROADCAST",
+				"type": "AMAZON.BroadcastChannel"
+			},
+			{
+				"name": "CIVIC",
+				"type": "AMAZON.CivicStructure"
+			},
+			{
+				"name": "COMIC",
+				"type": "AMAZON.Comic"
+			},
+			{
+				"name": "CORPORATION",
+				"type": "AMAZON.Corporation"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "AMAZON.Country"
+			},
+			{
+				"name": "CREATIVE",
+				"type": "AMAZON.CreativeWorkType"
+			},
+			{
+				"name": "DAY",
+				"type": "AMAZON.DayOfWeek"
+			},
+			{
+				"name": "DESSERT",
+				"type": "AMAZON.Dessert"
+			},
+			{
+				"name": "DEVICE",
+				"type": "AMAZON.DeviceType"
+			},
+			{
+				"name": "DIRECTOR",
+				"type": "AMAZON.Director"
+			},
+			{
+				"name": "DRINK",
+				"type": "AMAZON.Drink"
+			},
+			{
+				"name": "EDUCATION",
+				"type": "AMAZON.EducationalOrganization"
+			},
+			{
+				"name": "EVENT",
+				"type": "AMAZON.EventType"
+			},
+			{
+				"name": "FESTIVAL",
+				"type": "AMAZON.Festival"
+			},
+			{
+				"name": "CHARACTER",
+				"type": "AMAZON.FictionalCharacter"
+			},
+			{
+				"name": "FINANCIAL",
+				"type": "AMAZON.FinancialService"
+			},
+			{
+				"name": "FOOD",
+				"type": "AMAZON.Food"
+			},
+			{
+				"name": "FOOD_EST",
+				"type": "AMAZON.FoodEstablishment"
+			},
+			{
+				"name": "GAME",
+				"type": "AMAZON.Game"
+			},
+			{
+				"name": "GENRE",
+				"type": "AMAZON.Genre"
+			},
+			{
+				"name": "LANDFORM",
+				"type": "AMAZON.Landform"
+			},
+			{
+				"name": "LANDMARK",
+				"type": "AMAZON.LandmarksOrHistoricalBuildings"
+			},
+			{
+				"name": "LANGUAGE",
+				"type": "AMAZON.Language"
+			},
+			{
+				"name": "LOCAL_BUSI",
+				"type": "AMAZON.LocalBusiness"
+			},
+			{
+				"name": "LOCAL_BUSI_TYPE",
+				"type": "AMAZON.LocalBusinessType"
+			},
+			{
+				"name": "MEDICAL",
+				"type": "AMAZON.MedicalOrganization"
+			},
+			{
+				"name": "MONTH",
+				"type": "AMAZON.Month"
+			},
+			{
+				"name": "MOVIE",
+				"type": "AMAZON.Movie"
+			},
+			{
+				"name": "MOVIE_SERIES",
+				"type": "AMAZON.MovieSeries"
+			},
+			{
+				"name": "MOVIE_THEATER",
+				"type": "AMAZON.MovieTheater"
+			},
+			{
+				"name": "MUSIC_ALBUM",
+				"type": "AMAZON.MusicAlbum"
+			},
+			{
+				"name": "MUSIC_GROUP",
+				"type": "AMAZON.MusicGroup"
+			},
+			{
+				"name": "MUSICIAN",
+				"type": "AMAZON.Musician"
+			},
+			{
+				"name": "MUSIC_RECORD",
+				"type": "AMAZON.MusicRecording"
+			},
+			{
+				"name": "MUSIC_VENUE",
+				"type": "AMAZON.MusicVenue"
+			},
+			{
+				"name": "ORG",
+				"type": "AMAZON.Organization"
+			},
+			{
+				"name": "PERSON",
+				"type": "AMAZON.Person"
+			},
+			{
+				"name": "PROFESSIONAL",
+				"type": "AMAZON.Professional"
+			},
+			{
+				"name": "PROF_TYPE",
+				"type": "AMAZON.ProfessionalType"
+			},
+			{
+				"name": "RADIO",
+				"type": "AMAZON.RadioChannel"
+			},
+			{
+				"name": "RESIDENCE",
+				"type": "AMAZON.Residence"
+			},
+			{
+				"name": "ROOM",
+				"type": "AMAZON.Room"
+			},
+			{
+				"name": "SOCIAL",
+				"type": "AMAZON.SocialMediaPlatform"
+			},
+			{
+				"name": "SOFTWARE",
+				"type": "AMAZON.SoftwareApplication"
+			},
+			{
+				"name": "SOFT_GAME",
+				"type": "AMAZON.SoftwareGame"
+			},
+			{
+				"name": "SPORT",
+				"type": "AMAZON.Sport"
+			},
+			{
+				"name": "SPORT_EVENT",
+				"type": "AMAZON.SportsEvent"
+			},
+			{
+				"name": "SPORT_TEAM",
+				"type": "AMAZON.SportsTeam"
+			},
+			{
+				"name": "TV",
+				"type": "AMAZON.TelevisionChannel"
+			},
+			{
+				"name": "TV_EPISODE",
+				"type": "AMAZON.TVEpisode"
+			},
+			{
+				"name": "TV_SEASON",
+				"type": "AMAZON.TVSeason"
+			},
+			{
+				"name": "TV_SERIES",
+				"type": "AMAZON.TVSeries"
+			},
+			{
+				"name": "US_CITY",
+				"type": "AMAZON.US_CITY"
+			},
+			{
+				"name": "US_STATE",
+				"type": "AMAZON.US_STATE"
+			},
+			{
+				"name": "VIDEO_GAME",
+				"type": "AMAZON.VideoGame"
+			},
+			{
+				"name": "WEATHER",
+				"type": "AMAZON.WeatherCondition"
+			}
+		]
+	}, {
+		"intent": "AMAZON.StopIntent",
+		"slots": []
+	}, {
+		"intent": "AMAZON.CancelIntent",
+		"slots": []
+	}]
+}
