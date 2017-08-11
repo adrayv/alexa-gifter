@@ -1,10 +1,15 @@
 var Alexa = require('alexa-sdk');
 var rp = require('request-promise');
+var config = require('../config.js');
+
+var giphy = {
+	key : config.giphy_key;
+}
 
 // ----- basic API build -----
 const base = "https://api.giphy.com/v1/";
 const endpt_search = "gifs/search?";
-const api_key = "api_key=76bbb6e4dd874ca481aefb45a84a2991";
+const api_key = "api_key=" + giphy.key;
 
 // ------ Paramters for searching -------
 var param_query = "&q=";
@@ -37,7 +42,7 @@ var newSessionHandler = {
 		this.emit(':tell', "I am GIFter");
 	},
 	'getGifIntent': function() {
-		// FIX: reset variables
+		resetVars();
 		slotVal = getSlotVal(this.event.request.intent.slots); // get the response from a matched slot
 		if(slotVal == null) { // user response did not resolve to a intent
 			this.emit(':tell', misunderstand); // send error and end session
@@ -64,6 +69,29 @@ var newSessionHandler = {
 	}
 }
 
+function getSlotVal(slots) { // linear search through slots to find captured user input
+	for(i in slots) {
+		if(slots[i].value != null) {
+			console.log(slots[i].name + ": " + slots[i].value);
+			return slots[i].value
+		}
+	}
+	return null;
+}
+
+function getRequest() { // build the request handled by rp
+	return base + endpt_search + api_key + param_query + param_limit + param_offset + param_rating + param_lang;
+}
+
+function resetVars() {
+	var param_query = "&q=";
+	var param_limit = "&limit=";
+	var response = undefined;
+	var numGifs = undefined; // how many gifs were returned
+	var statusCode = undefined;
+	var slotVal = undefined;
+}
+
 /*
 rp(getRequest())
 .then(function(r) {
@@ -80,17 +108,3 @@ rp(getRequest())
 	console.log(err);
 });
 */
-
-function getSlotVal(slots) { // linear search through slots to find captured user input
-	for(i in slots) {
-		if(slots[i].value != null) {
-			console.log(slots[i].name + ": " + slots[i].value);
-			return slots[i].value
-		}
-	}
-	return null;
-}
-
-function getRequest() { // build the request handled by rp
-	return base + endpt_search + api_key + param_query + param_limit + param_offset + param_rating + param_lang;
-}
