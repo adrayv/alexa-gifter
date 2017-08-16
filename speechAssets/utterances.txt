@@ -1,65 +1,65 @@
-getGifIntent send me a {ACTOR} gif
-getGifIntent send me a {RATING} gif
-getGifIntent send me a {AIRLINE} gif
-getGifIntent send me a {ANIMAL} gif
-getGifIntent send me a {ARTIST} gif
-getGifIntent send me a {ATHLETE} gif
-getGifIntent send me a {AUTHOR} gif
-getGifIntent send me a {BOOK} gif
-getGifIntent send me a {BOOK_SERIES} gif
-getGifIntent send me a {BROADCAST} gif
-getGifIntent send me a {CIVIC} gif
-getGifIntent send me a {COMIC} gif
-getGifIntent send me a {CORPORATION} gif
-getGifIntent send me a {COUNTRY} gif
-getGifIntent send me a {CREATIVE} gif
-getGifIntent send me a {DAY} gif
-getGifIntent send me a {DESSERT} gif
-getGifIntent send me a {DEVICE} gif
-getGifIntent send me a {DIRECTOR} gif
-getGifIntent send me a {DRINK} gif
-getGifIntent send me a {EDUCATION} gif
-getGifIntent send me a {EVENT} gif
-getGifIntent send me a {FESTIVAL} gif
-getGifIntent send me a {CHARACTER} gif
-getGifIntent send me a {FINANCIAL} gif
-getGifIntent send me a {FOOD} gif
-getGifIntent send me a {FOOD_EST} gif
-getGifIntent send me a {GAME} gif
-getGifIntent send me a {GENRE} gif
-getGifIntent send me a {LANDFORM} gif
-getGifIntent send me a {LANDMARK} gif
-getGifIntent send me a {LANGUAGE} gif
-getGifIntent send me a {LOCAL_BUSI} gif
-getGifIntent send me a {LOCAL_BUSI_TYPE} gif
-getGifIntent send me a {MEDICAL} gif
-getGifIntent send me a {MONTH} gif
-getGifIntent send me a {MOVIE} gif
-getGifIntent send me a {MOVIE_SERIES} gif
-getGifIntent send me a {MOVIE_THEATER} gif
-getGifIntent send me a {MUSIC_ALBUM} gif
-getGifIntent send me a {MUSIC_GROUP} gif
-getGifIntent send me a {MUSICIAN} gif
-getGifIntent send me a {MUSIC_RECORD} gif
-getGifIntent send me a {MUSIC_VENUE} gif
-getGifIntent send me a {ORG} gif
-getGifIntent send me a {PERSON} gif
-getGifIntent send me a {PROFESSIONAL} gif
-getGifIntent send me a {PROF_TYPE} gif
-getGifIntent send me a {RADIO} gif
-getGifIntent send me a {RESIDENCE} gif
-getGifIntent send me a {ROOM} gif
-getGifIntent send me a {SOCIAL} gif
-getGifIntent send me a {SOFTWARE} gif
-getGifIntent send me a {SOFT_GAME} gif
-getGifIntent send me a {SPORT} gif
-getGifIntent send me a {SPORT_EVENT} gif
-getGifIntent send me a {SPORT_TEAM} gif
-getGifIntent send me a {TV} gif
-getGifIntent send me a {TV_EPISODE} gif
-getGifIntent send me a {TV_SEASON} gif
-getGifIntent send me a {TV_SERIES} gif
-getGifIntent send me a {US_CITY} gif
-getGifIntent send me a {US_STATE} gif
-getGifIntent send me a {VIDEO_GAME} gif
-getGifIntent send me a {WEATHER} gif
+getGifIntent {ACTOR}
+getGifIntent {RATING}
+getGifIntent {AIRLINE}
+getGifIntent {ANIMAL}
+getGifIntent {ARTIST}
+getGifIntent {ATHLETE}
+getGifIntent {AUTHOR}
+getGifIntent {BOOK}
+getGifIntent {BOOK_SERIES}
+getGifIntent {BROADCAST}
+getGifIntent {CIVIC}
+getGifIntent {COMIC}
+getGifIntent {CORPORATION}
+getGifIntent {COUNTRY}
+getGifIntent {CREATIVE}
+getGifIntent {DAY}
+getGifIntent {DESSERT}
+getGifIntent {DEVICE}
+getGifIntent {DIRECTOR}
+getGifIntent {DRINK}
+getGifIntent {EDUCATION}
+getGifIntent {EVENT}
+getGifIntent {FESTIVAL}
+getGifIntent {CHARACTER}
+getGifIntent {FINANCIAL}
+getGifIntent {FOOD}
+getGifIntent {FOOD_EST}
+getGifIntent {GAME}
+getGifIntent {GENRE}
+getGifIntent {LANDFORM}
+getGifIntent {LANDMARK}
+getGifIntent {LANGUAGE}
+getGifIntent {LOCAL_BUSI}
+getGifIntent {LOCAL_BUSI_TYPE}
+getGifIntent {MEDICAL}
+getGifIntent {MONTH}
+getGifIntent {MOVIE}
+getGifIntent {MOVIE_SERIES}
+getGifIntent {MOVIE_THEATER}
+getGifIntent {MUSIC_ALBUM}
+getGifIntent {MUSIC_GROUP}
+getGifIntent {MUSICIAN}
+getGifIntent {MUSIC_RECORD}
+getGifIntent {MUSIC_VENUE}
+getGifIntent {ORG}
+getGifIntent {PERSON}
+getGifIntent {PROFESSIONAL}
+getGifIntent {PROF_TYPE}
+getGifIntent {RADIO}
+getGifIntent {RESIDENCE}
+getGifIntent {ROOM}
+getGifIntent {SOCIAL}
+getGifIntent {SOFTWARE}
+getGifIntent {SOFT_GAME}
+getGifIntent {SPORT}
+getGifIntent {SPORT_EVENT}
+getGifIntent {SPORT_TEAM}
+getGifIntent {TV}
+getGifIntent {TV_EPISODE}
+getGifIntent {TV_SEASON}
+getGifIntent {TV_SERIES}
+getGifIntent {US_CITY}
+getGifIntent {US_STATE}
+getGifIntent {VIDEO_GAME}
+getGifIntent {WEATHER}

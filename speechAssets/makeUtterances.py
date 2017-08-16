@@ -14,7 +14,7 @@ with open('intents.json') as json_data:
     #pp.pprint(jsonObj["intents"][1]["slot"][0]["name"])
 
 for i in range(0, len(slots)):
-    file.write(base + "send me a {" + slots[i]["name"] + "} gif" + endl)
+    file.write(base + "{" + slots[i]["name"] + "}" + endl)
 
 #print(jsonObj.intents[1].slot[0].name)
 #print(jsonObj.intents[1].slot[0].type)

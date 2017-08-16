@@ -1,17 +1,22 @@
 var Alexa = require('alexa-sdk');
 var rp = require('request-promise');
-var config = require('../config.js');
+var AWS = require('aws-sdk');
+var s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-var giphy = {
-	key : config.giphy_key;
-}
+// ---- getting API keys ----
+var config = undefined;
+var s3_params = {
+	Bucket: "adrayv-bucket",
+	Key: "alexa-GIFter/config.json",
+};
+s3.getObject(s3_params, beginSesh); 
 
 // ----- basic API build -----
 const base = "https://api.giphy.com/v1/";
 const endpt_search = "gifs/search?";
-const api_key = "api_key=" + giphy.key;
+var api_key = "api_key=";
 
-// ------ Paramters for searching -------
+// ------ Paramters for searching giphy -------
 var param_query = "&q=";
 var param_limit = "&limit=";
 const param_offset = "&offset=0";
@@ -20,42 +25,58 @@ const param_lang = "&lang=en";
 
 // ----- variables -----
 var response = undefined;
-var numGifs = undefined; // how many gifs were returned
-var statusCode = undefined;
+var numGifs = -1;
+var statusCode = -1;
 var slotVal = undefined;
+var alexa = undefined;
 
 // ----- messages -----
 var misunderstand = "Sorry I didn't understand you that time";
-var error_msg = "Hmm, I couldn't find that gif";
+var errorMsg = "Hmm, I couldn't find that gif";
+//var giphyErr = "Sorry I can't access giphy right now. Try again later.";
 
+// ----- register handlers -----
 exports.handler = function (event, context, callback) {
-	var alexa = Alexa.handler(event, context);
+	alexa = Alexa.handler(event, context);
 	alexa.registerHandlers(newSessionHandler);
-	alexa.execute();
 };
 
-//param_query += "family guy";
-param_limit += 10;
+// ----- execute session -----
+function beginSesh(err, data) {
+	if(err) console.log("ERROR BEFORE EXECUTING");
+	else {
+		config = JSON.parse(data.Body.toString('ascii')); 
+		api_key += config.giphy;
+		alexa.execute();
+	}
+}
 
 var newSessionHandler = {
 	'LaunchRequest': function () {
+		if(config && config.giphy) console.log("THE GOOD STUFF");
+		else console.log("THE BAD STUFF");
 		this.emit(':tell', "I am GIFter");
 	},
 	'getGifIntent': function() {
+		console.log("CHECK 1");
 		resetVars();
 		slotVal = getSlotVal(this.event.request.intent.slots); // get the response from a matched slot
+		console.log("CHECK 2");
 		if(slotVal == null) { // user response did not resolve to a intent
 			this.emit(':tell', misunderstand); // send error and end session
 		}
+		console.log("CHECK 3");
 		param_query += slotVal;
+		console.log(slotVal);
+		param_limit += 10;
 		var THIS = this;
 		rp(getRequest())
 		.then(function(r) {
 			response = JSON.parse(r);
 			numGifs = response.pagination.count;
 			statusCode = response.meta.status;
-			if(numGifs == 0 || statusCode != 200) {
-				throw error_msg;
+			if(numGifs <= 0 || statusCode != 200) {
+				throw errorMsg;
 			}
 			/* at this point we have successfully gotten a gif */
 			console.log(response.data[0].url);
@@ -76,6 +97,7 @@ function getSlotVal(slots) { // linear search through slots to find captured use
 			return slots[i].value
 		}
 	}
+	console.log("RETURNED NULL");
 	return null;
 }
 
@@ -84,12 +106,12 @@ function getRequest() { // build the request handled by rp
 }
 
 function resetVars() {
-	var param_query = "&q=";
-	var param_limit = "&limit=";
-	var response = undefined;
-	var numGifs = undefined; // how many gifs were returned
-	var statusCode = undefined;
-	var slotVal = undefined;
+	param_query = "&q=";
+	param_limit = "&limit=";
+	response = undefined;
+	numGifs = -1; 
+	statusCode = -1;
+	slotVal = undefined;
 }
 
 /*
