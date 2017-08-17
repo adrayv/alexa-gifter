@@ -3,14 +3,6 @@ var rp = require('request-promise');
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
-// ---- getting API keys ----
-var config = undefined;
-var s3_params = {
-	Bucket: "adrayv-bucket",
-	Key: "alexa-GIFter/config.json",
-};
-s3.getObject(s3_params, beginSesh); 
-
 // ----- basic API build -----
 const base = "https://api.giphy.com/v1/";
 const endpt_search = "gifs/search?";
@@ -30,48 +22,58 @@ var statusCode = -1;
 var slotVal = undefined;
 var alexa = undefined;
 
+// ---- getting API keys ----
+var config = undefined;
+var s3_params = {
+	Bucket: "adrayv-bucket",
+	Key: "alexa-GIFter/config.json",
+};
+
 // ----- messages -----
 var misunderstand = "Sorry I didn't understand you that time";
 var errorMsg = "Hmm, I couldn't find that gif";
-//var giphyErr = "Sorry I can't access giphy right now. Try again later.";
+var giphyErr = "Sorry, I can't access giphy right now. Try again later.";
 
 // ----- register handlers -----
 exports.handler = function (event, context, callback) {
 	alexa = Alexa.handler(event, context);
 	alexa.registerHandlers(newSessionHandler);
+	alexa.execute();
 };
-
-// ----- execute session -----
-function beginSesh(err, data) {
-	if(err) console.log("ERROR BEFORE EXECUTING");
-	else {
-		config = JSON.parse(data.Body.toString('ascii')); 
-		api_key += config.giphy;
-		alexa.execute();
-	}
-}
 
 var newSessionHandler = {
 	'LaunchRequest': function () {
-		if(config && config.giphy) console.log("THE GOOD STUFF");
-		else console.log("THE BAD STUFF");
-		this.emit(':tell', "I am GIFter");
+		this.emit(':ask', "What kind of gif are you looking for?");
 	},
 	'getGifIntent': function() {
-		console.log("CHECK 1");
 		resetVars();
 		slotVal = getSlotVal(this.event.request.intent.slots); // get the response from a matched slot
-		console.log("CHECK 2");
 		if(slotVal == null) { // user response did not resolve to a intent
 			this.emit(':tell', misunderstand); // send error and end session
 		}
-		console.log("CHECK 3");
 		param_query += slotVal;
 		console.log(slotVal);
 		param_limit += 10;
 		var THIS = this;
-		rp(getRequest())
-		.then(function(r) {
+
+		var request = s3.getObject(s3_params);
+		var result = request.promise();
+		result
+		.then(function(data) { // called if the promise is fulfilled
+			console.log("THEN 1");
+			config = JSON.parse(data.Body.toString('ascii')); 
+			if(!(config.giphy)) {
+				throw "Unable to resolve config URL";
+			}
+			api_key += config.giphy;
+			return rp(getRequest());
+		}, function(error) { // called if the promise is rejected
+			console.log("THEN ERR");
+			console.log("ERROR: " + error);
+			throw giphyErr;
+		})
+		.then(function(r) { // called if giphy API promise is fulfilled
+			console.log("THEN 2");
 			response = JSON.parse(r);
 			numGifs = response.pagination.count;
 			statusCode = response.meta.status;
@@ -84,9 +86,12 @@ var newSessionHandler = {
 			THIS.emit(':tellWithCard', "check the alexa app", "numGifs: " + numGifs, "Status Code: " + statusCode);
 		})
 		.catch(function(err) {
+			console.log("CATCH");
 			console.log(err);
 			THIS.emit(':tell', err);
 		});
+
+		console.log("THIS WAS REACHED");
 	}
 }
 
@@ -108,25 +113,9 @@ function getRequest() { // build the request handled by rp
 function resetVars() {
 	param_query = "&q=";
 	param_limit = "&limit=";
+	api_key = "api_key=";
 	response = undefined;
 	numGifs = -1; 
 	statusCode = -1;
 	slotVal = undefined;
 }
-
-/*
-rp(getRequest())
-.then(function(r) {
-	response = JSON.parse(r);
-	numGifs = response.pagination.count;
-	statusCode = response.meta.status;
-	if(numGifs == 0 || statusCode != 200) {
-		throw "Error Getting Response";
-	}
-	console.log(response.data[0].url); // url of the gif
-	console.log(response.data[0].images.preview.mp4); // image of the gif
-})
-.catch(function(err) {
-	console.log(err);
-});
-*/
