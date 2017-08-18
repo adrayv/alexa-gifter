@@ -2,6 +2,7 @@ var Alexa = require('alexa-sdk');
 var rp = require('request-promise');
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3({apiVersion: '2006-03-01'});
+var sns = new AWS.SNS({apiVersion: '2010-03-31'});
 
 // ----- basic API build -----
 const base = "https://api.giphy.com/v1/";
@@ -29,6 +30,18 @@ var s3_params = {
 	Key: "alexa-GIFter/config.json",
 };
 
+// ----- SNS Parameters -----
+var sns_params = {
+	Message: "Hello World",
+	MessageAttributes: {
+		"msg" : {
+			DataType: "String",
+			StringValue: "gifGuru"
+		}
+	},
+	PhoneNumber: "+19517411386"
+};
+
 // ----- messages -----
 var misunderstand = "Sorry I didn't understand you that time";
 var errorMsg = "Hmm, I couldn't find that gif";
@@ -43,7 +56,19 @@ exports.handler = function (event, context, callback) {
 
 var newSessionHandler = {
 	'LaunchRequest': function () {
-		this.emit(':ask', "What kind of gif are you looking for?");
+		//this.emit(':ask', "What kind of gif are you looking for?");
+		var THIS = this;
+		sns.publish(sns_params).promise()
+		.then(function(data) {
+			THIS.emit(':tell', "I sent you a text");
+		}, function(error) {
+			console.log(error);
+			THIS.emit(':tell', "I could not send you a text");
+		})
+		.catch(function(err) {
+			console.log(err);
+			THIS.emit(':tell', "Something went wrong");
+		});
 	},
 	'getGifIntent': function() {
 		resetVars();
@@ -56,9 +81,9 @@ var newSessionHandler = {
 		param_limit += 10;
 		var THIS = this;
 
-		var request = s3.getObject(s3_params);
-		var result = request.promise();
-		result
+		//var request = s3.getObject(s3_params);
+		//var result = request.promise();
+		s3.getObject(s3_params).promise()
 		.then(function(data) { // called if the promise is fulfilled
 			console.log("THEN 1");
 			config = JSON.parse(data.Body.toString('ascii')); 
