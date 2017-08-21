@@ -3,6 +3,14 @@
 		"intent": "AMAZON.HelpIntent",
 		"slots": []
 	}, {
+		"intent": "getPhoneIntent",
+		"slots": [
+			{
+				"name": "PHONE",
+				"type": "AMAZON.NUMBER"
+			}
+		]
+	}, {
 		"intent": "getGifIntent",
 		"slots": [
 			{
@@ -267,7 +275,13 @@
 			}
 		]
 	}, {
-		"intent": "AMAZON.StopIntent",
+		"intent": "customYesIntent",
+		"slots": []
+	}, {
+		"intent": "AMAZON.YesIntent",
+		"slots": []
+	}, {
+		"intent": "AMAZON.NoIntent",
 		"slots": []
 	}, {
 		"intent": "AMAZON.CancelIntent",

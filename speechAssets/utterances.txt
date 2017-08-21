@@ -1,3 +1,14 @@
+getPhoneIntent {PHONE} 
+getPhoneIntent My phone number is {PHONE} 
+getPhoneIntent My number is {PHONE} 
+getPhoneIntent It's {PHONE} 
+customYesIntent yes
+customYesIntent yes
+customYesIntent yeah
+customYesIntent yup
+customYesIntent sure
+customYesIntent yes please
+customYesIntent correct
 getGifIntent {ACTOR}
 getGifIntent {RATING}
 getGifIntent {AIRLINE}

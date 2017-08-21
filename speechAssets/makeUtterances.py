@@ -4,17 +4,32 @@ import pprint
 file = open("utterances.txt","w")
 jsonObj = None
 slots = None
-base = "getGifIntent "
+getGif = "getGifIntent "
+getPhone = "getPhoneIntent "
+yes = "customYesIntent "
 gif = "gif "
 endl = "\n"
 #pp = pprint.PrettyPrinter(indent=1)
 with open('intents.json') as json_data:
     jsonObj = json.load(json_data)
-    slots = jsonObj["intents"][1]["slots"]
+    slots = jsonObj["intents"][2]["slots"]
     #pp.pprint(jsonObj["intents"][1]["slot"][0]["name"])
 
+file.write(getPhone + "{PHONE} " + endl)
+file.write(getPhone + "My phone number is " + "{PHONE} " + endl)
+file.write(getPhone + "My number is " + "{PHONE} " + endl)
+file.write(getPhone + "It's " + "{PHONE} " + endl)
+
+file.write(yes + "yes" + endl)
+file.write(yes + "yes" + endl)
+file.write(yes + "yeah" + endl)
+file.write(yes + "yup" + endl)
+file.write(yes + "sure" + endl)
+file.write(yes + "yes please" + endl)
+file.write(yes + "correct" + endl)
+
 for i in range(0, len(slots)):
-    file.write(base + "{" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "{" + slots[i]["name"] + "}" + endl)
 
 #print(jsonObj.intents[1].slot[0].name)
 #print(jsonObj.intents[1].slot[0].type)
