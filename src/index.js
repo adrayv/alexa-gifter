@@ -6,7 +6,7 @@ var sns = new AWS.SNS({apiVersion: '2010-03-31'});
 var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 var docClient = new AWS.DynamoDB.DocumentClient();
 
-// ----- basic API build -----
+// ----- basic giphy API build -----
 const base = "https://api.giphy.com/v1/";
 const endpt_search = "gifs/search?";
 var api_key = "api_key=";
@@ -62,24 +62,32 @@ var sns_params = {
 	PhoneNumber: ""
 };
 
-// ----- messages -----
+// ----- greeting messages -----
 var newWelcome = "Hi! I am the Gif Guru. If you need help using this skill, just say, I need help. ";
 var returnerWelcome = "Hi! Nice to hear from you again. ";
+
+// ----- error messages -----
+var apiErr = "Sorry, something odd happened. Please try again later.";
+var textErr = "Hmm, I can't text you that gif right now. Try searching for something else. ";
 var errorMsg = "Hmm, I couldn't find that gif";
 var generalErr = "Sorry, I didn't get that. ";
-var promptQuery = "What gif should I send to you? ";
 var giphyErr = "Sorry, I can't access giphy right now. Try again later.";
+
+// ----- help messages -----
+var generalHelpMsg = "Gif Guru will find the gifs you're looking for, and deliver them to your mobile phone. If you would like me to forget your phone number, please disable, then re-enable this skill on your Alexa App. ";
+var bestQueryUsage = "Here's an example to help you out. If I wanted a gif about a celebrity. I would say, Send me something about Kim Kardashian. ";
+var confirmNumUsage = "I need to confirm your number before we continue. Your number is ";
+
+// ----- prompt messages ------
 var phoneNonExist = "According to my records, I don't have your mobile phone number. ";
 var phoneUsage = "I need your number in order to text you the gifs that I find. ";
 var phoneAsk = "Starting with your area code, please briefly tell me your ten-digit phone number. ";
 var confirmNum1 = "Let me make sure I got that. Your number is, "; 
 var confirmNum2 = "Is this correct?";
-var confirmNumUsage = "I need to confirm your number before we continue. Your number is ";
-var generalHelpMsg = "Gif Guru will find the gifs you're looking for, and deliver them to your mobile phone. If you would like me to forget your phone number, please disable, then re-enable this skill on your Alexa App. ";
+var promptQuery = "What gif should I send to you? ";
+
+// ----- other messages -----
 var goodbyeMsg = "Ok, see you next time!";
-var apiErr = "Sorry, something odd happened. Please try again later.";
-var textErr = "Hmm, I can't text you that gif right now. Try searching for something else. ";
-var bestQueryUsage = "Here's an example to help you out. If I wanted a gif about a celebrity. I would say, Send me something about Kim Kardashian. ";
 
 // ----- states -----
 var states = {
