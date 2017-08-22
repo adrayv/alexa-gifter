@@ -13,7 +13,7 @@ var api_key = "api_key=";
 
 // ------ Paramters for searching giphy -------
 var param_query = "&q=";
-const param_limit = "&limit=10";
+const param_limit = "&limit=12";
 const param_offset = "&offset=0";
 const param_rating = "&rating=PG-13";
 const param_lang = "&lang=en";
@@ -67,18 +67,19 @@ var newWelcome = "Hi! I am the Gif Guru. If you need help using this skill, just
 var returnerWelcome = "Hi! Nice to hear from you again. ";
 var errorMsg = "Hmm, I couldn't find that gif";
 var generalErr = "Sorry, I didn't get that. ";
-var promptQuery = "What kind of gif are you looking for? ";
+var promptQuery = "What gif should I send to you? ";
 var giphyErr = "Sorry, I can't access giphy right now. Try again later.";
 var phoneNonExist = "According to my records, I don't have your mobile phone number. ";
 var phoneUsage = "I need your number in order to text you the gifs that I find. ";
-var phoneAsk = "Starting with your area code, please tell me your ten-digit phone number. ";
+var phoneAsk = "Starting with your area code, please briefly tell me your ten-digit phone number. ";
 var confirmNum1 = "Let me make sure I got that. Your number is, "; 
 var confirmNum2 = "Is this correct?";
 var confirmNumUsage = "I need to confirm your number before we continue. Your number is ";
-var generalHelpMsg = "Gif Guru will find and deliver the gifs you're looking for right to your mobile phone. If you would like me to forget your phone number, please disable and re-enable this skill on your Alexa App. ";
+var generalHelpMsg = "Gif Guru will find the gifs you're looking for, and deliver them to your mobile phone. If you would like me to forget your phone number, please disable, then re-enable this skill on your Alexa App. ";
 var goodbyeMsg = "Ok, see you next time!";
 var apiErr = "Sorry, something odd happened. Please try again later.";
-var textErr = "Sorry, I can't send you a text right now. Please try again later.";
+var textErr = "Hmm, I can't text you that gif right now. Try searching for something else. ";
+var bestQueryUsage = "Here's an example to help you out. If I wanted a gif about a celebrity. I would say, Send me something about Kim Kardashian. ";
 
 // ----- states -----
 var states = {
@@ -170,8 +171,7 @@ var newSessionHandler = {
 				throw errorMsg;
 			}
 			/* at this point we have successfully gotten a gif */
-			console.log(response.data[0].bitly_url);
-			sns_params.Message = response.data[0].bitly_url;
+			setMessage(response.data);
 			return sns.publish(sns_params).promise(); // send a text to the user with the gifs
 		})
 		.then(function(data) {
@@ -189,7 +189,7 @@ var newSessionHandler = {
 		this.emit(':ask', generalHelpMsg + promptQuery);
 	},
 	'Unhandled': function () {
-		this.emit(':ask', generalErr + promptQuery);
+		this.emit(':ask', generalErr + bestQueryUsage + promptQuery);
 	},
 	'AMAZON.StopIntent': function() {
 		this.emit(':tell', goodbyeMsg);
@@ -230,8 +230,7 @@ var queryModeHandler = Alexa.CreateStateHandler(states.QUERYMODE, {
 				throw errorMsg;
 			}
 			/* at this point we have successfully gotten a gif */
-			console.log(response.data[0].bitly_url);
-			sns_params.Message = response.data[0].bitly_url;
+			setMessage(response.data);
 			return sns.publish(sns_params).promise(); // send a text to the user with the gifs
 		})
 		.then(function(data) {
@@ -249,7 +248,7 @@ var queryModeHandler = Alexa.CreateStateHandler(states.QUERYMODE, {
 		this.emit(':ask', generalHelpMsg + promptQuery);
 	},
 	'Unhandled': function() {
-		this.emit(':ask', generalErr + promptQuery);
+		this.emit(':ask', generalErr + bestQueryUsage + promptQuery);
 	},
 	'AMAZON.StopIntent': function() {
 		this.emit(':tell', goodbyeMsg);
@@ -299,7 +298,7 @@ var confirmPhoneHandler = Alexa.CreateStateHandler(states.CONFIRMPHONE, {
 		docClient.put(db_put_params).promise()
 		.then(function(data) {
 			THIS.handler.state = states.QUERYMODE;
-			THIS.emit(':ask', "Ok, got it! " + promptQuery);
+			THIS.emit(':ask', "Ok, I've saved you number for future use! " + promptQuery);
 		}, function(error) {
 			console.log("ERROR PUTTING TO DB: " + error);
 			THIS.emit(':tell', apiErr);
@@ -329,12 +328,43 @@ var confirmPhoneHandler = Alexa.CreateStateHandler(states.CONFIRMPHONE, {
 
 // ----- Helper Functions -----
 
-function verbosifyNum(n) {
-	var v = ""
-	for(i = 0; i < n.length; ++i) {
-		v += (n[i] + ", ");
+function setMessage(gifs) {
+	var msg = "";
+	var len = gifs.length;
+	var i, i1, i2, i3;
+	if(len <= 0) {
+		sns_params.Message = "";
 	}
-	return v;
+	else if(len >= 3) { // choose a random gif and pick the adjacent two
+		i1 = Math.floor(Math.random() * len);
+		i2 = i1 + 1;
+		i3 = i2 + 1;
+		if(i2 >= len) i2 -= len; // circular wrapping 
+		if(i3 >= len) i3 -= len; // circular wrapping 
+		// ----- only attach url's if they exist -----
+		if(gifs[i1].bitly_url) {
+			msg += (gifs[i1].bitly_url + "\n");
+		}
+		if(gifs[i2].bitly_url) {
+			msg += (gifs[i2].bitly_url + "\n");
+		}
+		if(gifs[i3].bitly_url) {
+			msg += (gifs[i3].bitly_url + "\n");
+		}
+	}
+	else { // returns one gif if there are less than 3 results
+		console.log("SEARCH FOUND LESS THAN 3 RESULTS");
+		i = Math.floor(Math.random() * len);
+		if(gifs[i].bitly_url) {
+			msg += (gifs[i].bitly_url + "\n");
+		}
+	}
+	sns_params.Message = msg;
+	return;
+}
+
+function verbosifyNum(n) {
+	return "<say-as interpret-as='telephone'>" + n + "</say-as>. ";
 }
 
 function phoneIsValid(n) {
