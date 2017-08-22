@@ -7,6 +7,7 @@ slots = None
 getGif = "getGifIntent "
 getPhone = "getPhoneIntent "
 yes = "customYesIntent "
+stop = "AMAZON.StopIntent "
 gif = "gif "
 endl = "\n"
 #pp = pprint.PrettyPrinter(indent=1)
@@ -29,7 +30,22 @@ file.write(yes + "yes please" + endl)
 file.write(yes + "correct" + endl)
 
 for i in range(0, len(slots)):
-    file.write(getGif + "{" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "send me something about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "send me a gif about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "send me the {" + slots[i]["name"] + "} gif" + endl)
+    file.write(getGif + "find me something about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "find me a gif about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "find me the {" + slots[i]["name"] + "} gif" + endl)
+    file.write(getGif + "give me something about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "give me a gif about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "give me the {" + slots[i]["name"] + "} gif" + endl)
+    file.write(getGif + "get me something about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "get me a gif about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "get me the {" + slots[i]["name"] + "} gif" + endl)
+    file.write(getGif + "I want something about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "I want a gif about {" + slots[i]["name"] + "}" + endl)
+    file.write(getGif + "I want the {" + slots[i]["name"] + "} gif" + endl)
+    #file.write(getGif + "{" + slots[i]["name"] + "}" + endl)
 
 #print(jsonObj.intents[1].slot[0].name)
 #print(jsonObj.intents[1].slot[0].type)

@@ -278,6 +278,9 @@
 		"intent": "customYesIntent",
 		"slots": []
 	}, {
+		"intent": "AMAZON.StopIntent",
+		"slots": []
+	}, {
 		"intent": "AMAZON.YesIntent",
 		"slots": []
 	}, {
