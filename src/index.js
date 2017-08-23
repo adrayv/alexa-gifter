@@ -75,7 +75,7 @@ var giphyErr = "Sorry, I can't access giphy right now. Try again later.";
 
 // ----- help messages -----
 var generalHelpMsg = "Gif Guru will find the gifs you're looking for, and deliver them to your mobile phone. If you would like me to forget your phone number, please disable, then re-enable this skill on your Alexa App. ";
-var bestQueryUsage = "Here's an example to help you out. If I wanted a gif about a celebrity. I would say, Send me something about Kim Kardashian. ";
+var bestQueryUsage = "Here's an example to help you out. If I wanted a gif about a particular celebrity, I would say, Send me something about Kim Kardashian. ";
 var confirmNumUsage = "I need to confirm your number before we continue. Your number is ";
 
 // ----- prompt messages ------
@@ -88,6 +88,7 @@ var promptQuery = "What gif should I send to you? ";
 
 // ----- other messages -----
 var goodbyeMsg = "Ok, see you next time!";
+var confirmText = "I sent you a text with a few gifs you might like. This skill is powered by giphy. ";
 
 // ----- states -----
 var states = {
@@ -183,7 +184,7 @@ var newSessionHandler = {
 			return sns.publish(sns_params).promise(); // send a text to the user with the gifs
 		})
 		.then(function(data) {
-			THIS.emit(':tell', "I sent you a text with a few gifs you might like.");
+			THIS.emit(':tell', confirmText);
 		}, function(error) {
 			console.log("SNS ERROR: " + error);
 			THIS.emit(':tell', textErr);
@@ -242,7 +243,7 @@ var queryModeHandler = Alexa.CreateStateHandler(states.QUERYMODE, {
 			return sns.publish(sns_params).promise(); // send a text to the user with the gifs
 		})
 		.then(function(data) {
-			THIS.emit(':tell', "I sent you a text with a few gifs you might like.");
+			THIS.emit(':tell', confirmText);
 		}, function(error) {
 			console.log("SNS ERROR: " + error);
 			THIS.emit(':tell', textErr);

@@ -45,6 +45,7 @@ for i in range(0, len(slots)):
     file.write(getGif + "I want something about {" + slots[i]["name"] + "}" + endl)
     file.write(getGif + "I want a gif about {" + slots[i]["name"] + "}" + endl)
     file.write(getGif + "I want the {" + slots[i]["name"] + "} gif" + endl)
+    file.write(getGif + "Search for {" + slots[i]["name"] + "}" + endl)
     #file.write(getGif + "{" + slots[i]["name"] + "}" + endl)
 
 #print(jsonObj.intents[1].slot[0].name)

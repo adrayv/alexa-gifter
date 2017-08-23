@@ -24,6 +24,7 @@ getGifIntent get me the {ACTOR} gif
 getGifIntent I want something about {ACTOR}
 getGifIntent I want a gif about {ACTOR}
 getGifIntent I want the {ACTOR} gif
+getGifIntent Search for {ACTOR}
 getGifIntent send me something about {RATING}
 getGifIntent send me a gif about {RATING}
 getGifIntent send me the {RATING} gif
@@ -39,6 +40,7 @@ getGifIntent get me the {RATING} gif
 getGifIntent I want something about {RATING}
 getGifIntent I want a gif about {RATING}
 getGifIntent I want the {RATING} gif
+getGifIntent Search for {RATING}
 getGifIntent send me something about {AIRLINE}
 getGifIntent send me a gif about {AIRLINE}
 getGifIntent send me the {AIRLINE} gif
@@ -54,6 +56,7 @@ getGifIntent get me the {AIRLINE} gif
 getGifIntent I want something about {AIRLINE}
 getGifIntent I want a gif about {AIRLINE}
 getGifIntent I want the {AIRLINE} gif
+getGifIntent Search for {AIRLINE}
 getGifIntent send me something about {ANIMAL}
 getGifIntent send me a gif about {ANIMAL}
 getGifIntent send me the {ANIMAL} gif
@@ -69,6 +72,7 @@ getGifIntent get me the {ANIMAL} gif
 getGifIntent I want something about {ANIMAL}
 getGifIntent I want a gif about {ANIMAL}
 getGifIntent I want the {ANIMAL} gif
+getGifIntent Search for {ANIMAL}
 getGifIntent send me something about {ARTIST}
 getGifIntent send me a gif about {ARTIST}
 getGifIntent send me the {ARTIST} gif
@@ -84,6 +88,7 @@ getGifIntent get me the {ARTIST} gif
 getGifIntent I want something about {ARTIST}
 getGifIntent I want a gif about {ARTIST}
 getGifIntent I want the {ARTIST} gif
+getGifIntent Search for {ARTIST}
 getGifIntent send me something about {ATHLETE}
 getGifIntent send me a gif about {ATHLETE}
 getGifIntent send me the {ATHLETE} gif
@@ -99,6 +104,7 @@ getGifIntent get me the {ATHLETE} gif
 getGifIntent I want something about {ATHLETE}
 getGifIntent I want a gif about {ATHLETE}
 getGifIntent I want the {ATHLETE} gif
+getGifIntent Search for {ATHLETE}
 getGifIntent send me something about {AUTHOR}
 getGifIntent send me a gif about {AUTHOR}
 getGifIntent send me the {AUTHOR} gif
@@ -114,6 +120,7 @@ getGifIntent get me the {AUTHOR} gif
 getGifIntent I want something about {AUTHOR}
 getGifIntent I want a gif about {AUTHOR}
 getGifIntent I want the {AUTHOR} gif
+getGifIntent Search for {AUTHOR}
 getGifIntent send me something about {BOOK}
 getGifIntent send me a gif about {BOOK}
 getGifIntent send me the {BOOK} gif
@@ -129,6 +136,7 @@ getGifIntent get me the {BOOK} gif
 getGifIntent I want something about {BOOK}
 getGifIntent I want a gif about {BOOK}
 getGifIntent I want the {BOOK} gif
+getGifIntent Search for {BOOK}
 getGifIntent send me something about {BOOK_SERIES}
 getGifIntent send me a gif about {BOOK_SERIES}
 getGifIntent send me the {BOOK_SERIES} gif
@@ -144,6 +152,7 @@ getGifIntent get me the {BOOK_SERIES} gif
 getGifIntent I want something about {BOOK_SERIES}
 getGifIntent I want a gif about {BOOK_SERIES}
 getGifIntent I want the {BOOK_SERIES} gif
+getGifIntent Search for {BOOK_SERIES}
 getGifIntent send me something about {BROADCAST}
 getGifIntent send me a gif about {BROADCAST}
 getGifIntent send me the {BROADCAST} gif
@@ -159,6 +168,7 @@ getGifIntent get me the {BROADCAST} gif
 getGifIntent I want something about {BROADCAST}
 getGifIntent I want a gif about {BROADCAST}
 getGifIntent I want the {BROADCAST} gif
+getGifIntent Search for {BROADCAST}
 getGifIntent send me something about {CIVIC}
 getGifIntent send me a gif about {CIVIC}
 getGifIntent send me the {CIVIC} gif
@@ -174,6 +184,7 @@ getGifIntent get me the {CIVIC} gif
 getGifIntent I want something about {CIVIC}
 getGifIntent I want a gif about {CIVIC}
 getGifIntent I want the {CIVIC} gif
+getGifIntent Search for {CIVIC}
 getGifIntent send me something about {COMIC}
 getGifIntent send me a gif about {COMIC}
 getGifIntent send me the {COMIC} gif
@@ -189,6 +200,7 @@ getGifIntent get me the {COMIC} gif
 getGifIntent I want something about {COMIC}
 getGifIntent I want a gif about {COMIC}
 getGifIntent I want the {COMIC} gif
+getGifIntent Search for {COMIC}
 getGifIntent send me something about {CORPORATION}
 getGifIntent send me a gif about {CORPORATION}
 getGifIntent send me the {CORPORATION} gif
@@ -204,6 +216,7 @@ getGifIntent get me the {CORPORATION} gif
 getGifIntent I want something about {CORPORATION}
 getGifIntent I want a gif about {CORPORATION}
 getGifIntent I want the {CORPORATION} gif
+getGifIntent Search for {CORPORATION}
 getGifIntent send me something about {COUNTRY}
 getGifIntent send me a gif about {COUNTRY}
 getGifIntent send me the {COUNTRY} gif
@@ -219,6 +232,7 @@ getGifIntent get me the {COUNTRY} gif
 getGifIntent I want something about {COUNTRY}
 getGifIntent I want a gif about {COUNTRY}
 getGifIntent I want the {COUNTRY} gif
+getGifIntent Search for {COUNTRY}
 getGifIntent send me something about {CREATIVE}
 getGifIntent send me a gif about {CREATIVE}
 getGifIntent send me the {CREATIVE} gif
@@ -234,6 +248,7 @@ getGifIntent get me the {CREATIVE} gif
 getGifIntent I want something about {CREATIVE}
 getGifIntent I want a gif about {CREATIVE}
 getGifIntent I want the {CREATIVE} gif
+getGifIntent Search for {CREATIVE}
 getGifIntent send me something about {DAY}
 getGifIntent send me a gif about {DAY}
 getGifIntent send me the {DAY} gif
@@ -249,6 +264,7 @@ getGifIntent get me the {DAY} gif
 getGifIntent I want something about {DAY}
 getGifIntent I want a gif about {DAY}
 getGifIntent I want the {DAY} gif
+getGifIntent Search for {DAY}
 getGifIntent send me something about {DESSERT}
 getGifIntent send me a gif about {DESSERT}
 getGifIntent send me the {DESSERT} gif
@@ -264,6 +280,7 @@ getGifIntent get me the {DESSERT} gif
 getGifIntent I want something about {DESSERT}
 getGifIntent I want a gif about {DESSERT}
 getGifIntent I want the {DESSERT} gif
+getGifIntent Search for {DESSERT}
 getGifIntent send me something about {DEVICE}
 getGifIntent send me a gif about {DEVICE}
 getGifIntent send me the {DEVICE} gif
@@ -279,6 +296,7 @@ getGifIntent get me the {DEVICE} gif
 getGifIntent I want something about {DEVICE}
 getGifIntent I want a gif about {DEVICE}
 getGifIntent I want the {DEVICE} gif
+getGifIntent Search for {DEVICE}
 getGifIntent send me something about {DIRECTOR}
 getGifIntent send me a gif about {DIRECTOR}
 getGifIntent send me the {DIRECTOR} gif
@@ -294,6 +312,7 @@ getGifIntent get me the {DIRECTOR} gif
 getGifIntent I want something about {DIRECTOR}
 getGifIntent I want a gif about {DIRECTOR}
 getGifIntent I want the {DIRECTOR} gif
+getGifIntent Search for {DIRECTOR}
 getGifIntent send me something about {DRINK}
 getGifIntent send me a gif about {DRINK}
 getGifIntent send me the {DRINK} gif
@@ -309,6 +328,7 @@ getGifIntent get me the {DRINK} gif
 getGifIntent I want something about {DRINK}
 getGifIntent I want a gif about {DRINK}
 getGifIntent I want the {DRINK} gif
+getGifIntent Search for {DRINK}
 getGifIntent send me something about {EDUCATION}
 getGifIntent send me a gif about {EDUCATION}
 getGifIntent send me the {EDUCATION} gif
@@ -324,6 +344,7 @@ getGifIntent get me the {EDUCATION} gif
 getGifIntent I want something about {EDUCATION}
 getGifIntent I want a gif about {EDUCATION}
 getGifIntent I want the {EDUCATION} gif
+getGifIntent Search for {EDUCATION}
 getGifIntent send me something about {EVENT}
 getGifIntent send me a gif about {EVENT}
 getGifIntent send me the {EVENT} gif
@@ -339,6 +360,7 @@ getGifIntent get me the {EVENT} gif
 getGifIntent I want something about {EVENT}
 getGifIntent I want a gif about {EVENT}
 getGifIntent I want the {EVENT} gif
+getGifIntent Search for {EVENT}
 getGifIntent send me something about {FESTIVAL}
 getGifIntent send me a gif about {FESTIVAL}
 getGifIntent send me the {FESTIVAL} gif
@@ -354,6 +376,7 @@ getGifIntent get me the {FESTIVAL} gif
 getGifIntent I want something about {FESTIVAL}
 getGifIntent I want a gif about {FESTIVAL}
 getGifIntent I want the {FESTIVAL} gif
+getGifIntent Search for {FESTIVAL}
 getGifIntent send me something about {CHARACTER}
 getGifIntent send me a gif about {CHARACTER}
 getGifIntent send me the {CHARACTER} gif
@@ -369,6 +392,7 @@ getGifIntent get me the {CHARACTER} gif
 getGifIntent I want something about {CHARACTER}
 getGifIntent I want a gif about {CHARACTER}
 getGifIntent I want the {CHARACTER} gif
+getGifIntent Search for {CHARACTER}
 getGifIntent send me something about {FINANCIAL}
 getGifIntent send me a gif about {FINANCIAL}
 getGifIntent send me the {FINANCIAL} gif
@@ -384,6 +408,7 @@ getGifIntent get me the {FINANCIAL} gif
 getGifIntent I want something about {FINANCIAL}
 getGifIntent I want a gif about {FINANCIAL}
 getGifIntent I want the {FINANCIAL} gif
+getGifIntent Search for {FINANCIAL}
 getGifIntent send me something about {FOOD}
 getGifIntent send me a gif about {FOOD}
 getGifIntent send me the {FOOD} gif
@@ -399,6 +424,7 @@ getGifIntent get me the {FOOD} gif
 getGifIntent I want something about {FOOD}
 getGifIntent I want a gif about {FOOD}
 getGifIntent I want the {FOOD} gif
+getGifIntent Search for {FOOD}
 getGifIntent send me something about {FOOD_EST}
 getGifIntent send me a gif about {FOOD_EST}
 getGifIntent send me the {FOOD_EST} gif
@@ -414,6 +440,7 @@ getGifIntent get me the {FOOD_EST} gif
 getGifIntent I want something about {FOOD_EST}
 getGifIntent I want a gif about {FOOD_EST}
 getGifIntent I want the {FOOD_EST} gif
+getGifIntent Search for {FOOD_EST}
 getGifIntent send me something about {GAME}
 getGifIntent send me a gif about {GAME}
 getGifIntent send me the {GAME} gif
@@ -429,6 +456,7 @@ getGifIntent get me the {GAME} gif
 getGifIntent I want something about {GAME}
 getGifIntent I want a gif about {GAME}
 getGifIntent I want the {GAME} gif
+getGifIntent Search for {GAME}
 getGifIntent send me something about {GENRE}
 getGifIntent send me a gif about {GENRE}
 getGifIntent send me the {GENRE} gif
@@ -444,6 +472,7 @@ getGifIntent get me the {GENRE} gif
 getGifIntent I want something about {GENRE}
 getGifIntent I want a gif about {GENRE}
 getGifIntent I want the {GENRE} gif
+getGifIntent Search for {GENRE}
 getGifIntent send me something about {LANDFORM}
 getGifIntent send me a gif about {LANDFORM}
 getGifIntent send me the {LANDFORM} gif
@@ -459,6 +488,7 @@ getGifIntent get me the {LANDFORM} gif
 getGifIntent I want something about {LANDFORM}
 getGifIntent I want a gif about {LANDFORM}
 getGifIntent I want the {LANDFORM} gif
+getGifIntent Search for {LANDFORM}
 getGifIntent send me something about {LANDMARK}
 getGifIntent send me a gif about {LANDMARK}
 getGifIntent send me the {LANDMARK} gif
@@ -474,6 +504,7 @@ getGifIntent get me the {LANDMARK} gif
 getGifIntent I want something about {LANDMARK}
 getGifIntent I want a gif about {LANDMARK}
 getGifIntent I want the {LANDMARK} gif
+getGifIntent Search for {LANDMARK}
 getGifIntent send me something about {LANGUAGE}
 getGifIntent send me a gif about {LANGUAGE}
 getGifIntent send me the {LANGUAGE} gif
@@ -489,6 +520,7 @@ getGifIntent get me the {LANGUAGE} gif
 getGifIntent I want something about {LANGUAGE}
 getGifIntent I want a gif about {LANGUAGE}
 getGifIntent I want the {LANGUAGE} gif
+getGifIntent Search for {LANGUAGE}
 getGifIntent send me something about {LOCAL_BUSI}
 getGifIntent send me a gif about {LOCAL_BUSI}
 getGifIntent send me the {LOCAL_BUSI} gif
@@ -504,6 +536,7 @@ getGifIntent get me the {LOCAL_BUSI} gif
 getGifIntent I want something about {LOCAL_BUSI}
 getGifIntent I want a gif about {LOCAL_BUSI}
 getGifIntent I want the {LOCAL_BUSI} gif
+getGifIntent Search for {LOCAL_BUSI}
 getGifIntent send me something about {LOCAL_BUSI_TYPE}
 getGifIntent send me a gif about {LOCAL_BUSI_TYPE}
 getGifIntent send me the {LOCAL_BUSI_TYPE} gif
@@ -519,6 +552,7 @@ getGifIntent get me the {LOCAL_BUSI_TYPE} gif
 getGifIntent I want something about {LOCAL_BUSI_TYPE}
 getGifIntent I want a gif about {LOCAL_BUSI_TYPE}
 getGifIntent I want the {LOCAL_BUSI_TYPE} gif
+getGifIntent Search for {LOCAL_BUSI_TYPE}
 getGifIntent send me something about {MEDICAL}
 getGifIntent send me a gif about {MEDICAL}
 getGifIntent send me the {MEDICAL} gif
@@ -534,6 +568,7 @@ getGifIntent get me the {MEDICAL} gif
 getGifIntent I want something about {MEDICAL}
 getGifIntent I want a gif about {MEDICAL}
 getGifIntent I want the {MEDICAL} gif
+getGifIntent Search for {MEDICAL}
 getGifIntent send me something about {MONTH}
 getGifIntent send me a gif about {MONTH}
 getGifIntent send me the {MONTH} gif
@@ -549,6 +584,7 @@ getGifIntent get me the {MONTH} gif
 getGifIntent I want something about {MONTH}
 getGifIntent I want a gif about {MONTH}
 getGifIntent I want the {MONTH} gif
+getGifIntent Search for {MONTH}
 getGifIntent send me something about {MOVIE}
 getGifIntent send me a gif about {MOVIE}
 getGifIntent send me the {MOVIE} gif
@@ -564,6 +600,7 @@ getGifIntent get me the {MOVIE} gif
 getGifIntent I want something about {MOVIE}
 getGifIntent I want a gif about {MOVIE}
 getGifIntent I want the {MOVIE} gif
+getGifIntent Search for {MOVIE}
 getGifIntent send me something about {MOVIE_SERIES}
 getGifIntent send me a gif about {MOVIE_SERIES}
 getGifIntent send me the {MOVIE_SERIES} gif
@@ -579,6 +616,7 @@ getGifIntent get me the {MOVIE_SERIES} gif
 getGifIntent I want something about {MOVIE_SERIES}
 getGifIntent I want a gif about {MOVIE_SERIES}
 getGifIntent I want the {MOVIE_SERIES} gif
+getGifIntent Search for {MOVIE_SERIES}
 getGifIntent send me something about {MOVIE_THEATER}
 getGifIntent send me a gif about {MOVIE_THEATER}
 getGifIntent send me the {MOVIE_THEATER} gif
@@ -594,6 +632,7 @@ getGifIntent get me the {MOVIE_THEATER} gif
 getGifIntent I want something about {MOVIE_THEATER}
 getGifIntent I want a gif about {MOVIE_THEATER}
 getGifIntent I want the {MOVIE_THEATER} gif
+getGifIntent Search for {MOVIE_THEATER}
 getGifIntent send me something about {MUSIC_ALBUM}
 getGifIntent send me a gif about {MUSIC_ALBUM}
 getGifIntent send me the {MUSIC_ALBUM} gif
@@ -609,6 +648,7 @@ getGifIntent get me the {MUSIC_ALBUM} gif
 getGifIntent I want something about {MUSIC_ALBUM}
 getGifIntent I want a gif about {MUSIC_ALBUM}
 getGifIntent I want the {MUSIC_ALBUM} gif
+getGifIntent Search for {MUSIC_ALBUM}
 getGifIntent send me something about {MUSIC_GROUP}
 getGifIntent send me a gif about {MUSIC_GROUP}
 getGifIntent send me the {MUSIC_GROUP} gif
@@ -624,6 +664,7 @@ getGifIntent get me the {MUSIC_GROUP} gif
 getGifIntent I want something about {MUSIC_GROUP}
 getGifIntent I want a gif about {MUSIC_GROUP}
 getGifIntent I want the {MUSIC_GROUP} gif
+getGifIntent Search for {MUSIC_GROUP}
 getGifIntent send me something about {MUSICIAN}
 getGifIntent send me a gif about {MUSICIAN}
 getGifIntent send me the {MUSICIAN} gif
@@ -639,6 +680,7 @@ getGifIntent get me the {MUSICIAN} gif
 getGifIntent I want something about {MUSICIAN}
 getGifIntent I want a gif about {MUSICIAN}
 getGifIntent I want the {MUSICIAN} gif
+getGifIntent Search for {MUSICIAN}
 getGifIntent send me something about {MUSIC_RECORD}
 getGifIntent send me a gif about {MUSIC_RECORD}
 getGifIntent send me the {MUSIC_RECORD} gif
@@ -654,6 +696,7 @@ getGifIntent get me the {MUSIC_RECORD} gif
 getGifIntent I want something about {MUSIC_RECORD}
 getGifIntent I want a gif about {MUSIC_RECORD}
 getGifIntent I want the {MUSIC_RECORD} gif
+getGifIntent Search for {MUSIC_RECORD}
 getGifIntent send me something about {MUSIC_VENUE}
 getGifIntent send me a gif about {MUSIC_VENUE}
 getGifIntent send me the {MUSIC_VENUE} gif
@@ -669,6 +712,7 @@ getGifIntent get me the {MUSIC_VENUE} gif
 getGifIntent I want something about {MUSIC_VENUE}
 getGifIntent I want a gif about {MUSIC_VENUE}
 getGifIntent I want the {MUSIC_VENUE} gif
+getGifIntent Search for {MUSIC_VENUE}
 getGifIntent send me something about {ORG}
 getGifIntent send me a gif about {ORG}
 getGifIntent send me the {ORG} gif
@@ -684,6 +728,7 @@ getGifIntent get me the {ORG} gif
 getGifIntent I want something about {ORG}
 getGifIntent I want a gif about {ORG}
 getGifIntent I want the {ORG} gif
+getGifIntent Search for {ORG}
 getGifIntent send me something about {PERSON}
 getGifIntent send me a gif about {PERSON}
 getGifIntent send me the {PERSON} gif
@@ -699,6 +744,7 @@ getGifIntent get me the {PERSON} gif
 getGifIntent I want something about {PERSON}
 getGifIntent I want a gif about {PERSON}
 getGifIntent I want the {PERSON} gif
+getGifIntent Search for {PERSON}
 getGifIntent send me something about {PROFESSIONAL}
 getGifIntent send me a gif about {PROFESSIONAL}
 getGifIntent send me the {PROFESSIONAL} gif
@@ -714,6 +760,7 @@ getGifIntent get me the {PROFESSIONAL} gif
 getGifIntent I want something about {PROFESSIONAL}
 getGifIntent I want a gif about {PROFESSIONAL}
 getGifIntent I want the {PROFESSIONAL} gif
+getGifIntent Search for {PROFESSIONAL}
 getGifIntent send me something about {PROF_TYPE}
 getGifIntent send me a gif about {PROF_TYPE}
 getGifIntent send me the {PROF_TYPE} gif
@@ -729,6 +776,7 @@ getGifIntent get me the {PROF_TYPE} gif
 getGifIntent I want something about {PROF_TYPE}
 getGifIntent I want a gif about {PROF_TYPE}
 getGifIntent I want the {PROF_TYPE} gif
+getGifIntent Search for {PROF_TYPE}
 getGifIntent send me something about {RADIO}
 getGifIntent send me a gif about {RADIO}
 getGifIntent send me the {RADIO} gif
@@ -744,6 +792,7 @@ getGifIntent get me the {RADIO} gif
 getGifIntent I want something about {RADIO}
 getGifIntent I want a gif about {RADIO}
 getGifIntent I want the {RADIO} gif
+getGifIntent Search for {RADIO}
 getGifIntent send me something about {RESIDENCE}
 getGifIntent send me a gif about {RESIDENCE}
 getGifIntent send me the {RESIDENCE} gif
@@ -759,6 +808,7 @@ getGifIntent get me the {RESIDENCE} gif
 getGifIntent I want something about {RESIDENCE}
 getGifIntent I want a gif about {RESIDENCE}
 getGifIntent I want the {RESIDENCE} gif
+getGifIntent Search for {RESIDENCE}
 getGifIntent send me something about {ROOM}
 getGifIntent send me a gif about {ROOM}
 getGifIntent send me the {ROOM} gif
@@ -774,6 +824,7 @@ getGifIntent get me the {ROOM} gif
 getGifIntent I want something about {ROOM}
 getGifIntent I want a gif about {ROOM}
 getGifIntent I want the {ROOM} gif
+getGifIntent Search for {ROOM}
 getGifIntent send me something about {SOCIAL}
 getGifIntent send me a gif about {SOCIAL}
 getGifIntent send me the {SOCIAL} gif
@@ -789,6 +840,7 @@ getGifIntent get me the {SOCIAL} gif
 getGifIntent I want something about {SOCIAL}
 getGifIntent I want a gif about {SOCIAL}
 getGifIntent I want the {SOCIAL} gif
+getGifIntent Search for {SOCIAL}
 getGifIntent send me something about {SOFTWARE}
 getGifIntent send me a gif about {SOFTWARE}
 getGifIntent send me the {SOFTWARE} gif
@@ -804,6 +856,7 @@ getGifIntent get me the {SOFTWARE} gif
 getGifIntent I want something about {SOFTWARE}
 getGifIntent I want a gif about {SOFTWARE}
 getGifIntent I want the {SOFTWARE} gif
+getGifIntent Search for {SOFTWARE}
 getGifIntent send me something about {SOFT_GAME}
 getGifIntent send me a gif about {SOFT_GAME}
 getGifIntent send me the {SOFT_GAME} gif
@@ -819,6 +872,7 @@ getGifIntent get me the {SOFT_GAME} gif
 getGifIntent I want something about {SOFT_GAME}
 getGifIntent I want a gif about {SOFT_GAME}
 getGifIntent I want the {SOFT_GAME} gif
+getGifIntent Search for {SOFT_GAME}
 getGifIntent send me something about {SPORT}
 getGifIntent send me a gif about {SPORT}
 getGifIntent send me the {SPORT} gif
@@ -834,6 +888,7 @@ getGifIntent get me the {SPORT} gif
 getGifIntent I want something about {SPORT}
 getGifIntent I want a gif about {SPORT}
 getGifIntent I want the {SPORT} gif
+getGifIntent Search for {SPORT}
 getGifIntent send me something about {SPORT_EVENT}
 getGifIntent send me a gif about {SPORT_EVENT}
 getGifIntent send me the {SPORT_EVENT} gif
@@ -849,6 +904,7 @@ getGifIntent get me the {SPORT_EVENT} gif
 getGifIntent I want something about {SPORT_EVENT}
 getGifIntent I want a gif about {SPORT_EVENT}
 getGifIntent I want the {SPORT_EVENT} gif
+getGifIntent Search for {SPORT_EVENT}
 getGifIntent send me something about {SPORT_TEAM}
 getGifIntent send me a gif about {SPORT_TEAM}
 getGifIntent send me the {SPORT_TEAM} gif
@@ -864,6 +920,7 @@ getGifIntent get me the {SPORT_TEAM} gif
 getGifIntent I want something about {SPORT_TEAM}
 getGifIntent I want a gif about {SPORT_TEAM}
 getGifIntent I want the {SPORT_TEAM} gif
+getGifIntent Search for {SPORT_TEAM}
 getGifIntent send me something about {TV}
 getGifIntent send me a gif about {TV}
 getGifIntent send me the {TV} gif
@@ -879,6 +936,7 @@ getGifIntent get me the {TV} gif
 getGifIntent I want something about {TV}
 getGifIntent I want a gif about {TV}
 getGifIntent I want the {TV} gif
+getGifIntent Search for {TV}
 getGifIntent send me something about {TV_EPISODE}
 getGifIntent send me a gif about {TV_EPISODE}
 getGifIntent send me the {TV_EPISODE} gif
@@ -894,6 +952,7 @@ getGifIntent get me the {TV_EPISODE} gif
 getGifIntent I want something about {TV_EPISODE}
 getGifIntent I want a gif about {TV_EPISODE}
 getGifIntent I want the {TV_EPISODE} gif
+getGifIntent Search for {TV_EPISODE}
 getGifIntent send me something about {TV_SEASON}
 getGifIntent send me a gif about {TV_SEASON}
 getGifIntent send me the {TV_SEASON} gif
@@ -909,6 +968,7 @@ getGifIntent get me the {TV_SEASON} gif
 getGifIntent I want something about {TV_SEASON}
 getGifIntent I want a gif about {TV_SEASON}
 getGifIntent I want the {TV_SEASON} gif
+getGifIntent Search for {TV_SEASON}
 getGifIntent send me something about {TV_SERIES}
 getGifIntent send me a gif about {TV_SERIES}
 getGifIntent send me the {TV_SERIES} gif
@@ -924,6 +984,7 @@ getGifIntent get me the {TV_SERIES} gif
 getGifIntent I want something about {TV_SERIES}
 getGifIntent I want a gif about {TV_SERIES}
 getGifIntent I want the {TV_SERIES} gif
+getGifIntent Search for {TV_SERIES}
 getGifIntent send me something about {US_CITY}
 getGifIntent send me a gif about {US_CITY}
 getGifIntent send me the {US_CITY} gif
@@ -939,6 +1000,7 @@ getGifIntent get me the {US_CITY} gif
 getGifIntent I want something about {US_CITY}
 getGifIntent I want a gif about {US_CITY}
 getGifIntent I want the {US_CITY} gif
+getGifIntent Search for {US_CITY}
 getGifIntent send me something about {US_STATE}
 getGifIntent send me a gif about {US_STATE}
 getGifIntent send me the {US_STATE} gif
@@ -954,6 +1016,7 @@ getGifIntent get me the {US_STATE} gif
 getGifIntent I want something about {US_STATE}
 getGifIntent I want a gif about {US_STATE}
 getGifIntent I want the {US_STATE} gif
+getGifIntent Search for {US_STATE}
 getGifIntent send me something about {VIDEO_GAME}
 getGifIntent send me a gif about {VIDEO_GAME}
 getGifIntent send me the {VIDEO_GAME} gif
@@ -969,6 +1032,7 @@ getGifIntent get me the {VIDEO_GAME} gif
 getGifIntent I want something about {VIDEO_GAME}
 getGifIntent I want a gif about {VIDEO_GAME}
 getGifIntent I want the {VIDEO_GAME} gif
+getGifIntent Search for {VIDEO_GAME}
 getGifIntent send me something about {WEATHER}
 getGifIntent send me a gif about {WEATHER}
 getGifIntent send me the {WEATHER} gif
@@ -984,3 +1048,4 @@ getGifIntent get me the {WEATHER} gif
 getGifIntent I want something about {WEATHER}
 getGifIntent I want a gif about {WEATHER}
 getGifIntent I want the {WEATHER} gif
+getGifIntent Search for {WEATHER}
