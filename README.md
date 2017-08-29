@@ -5,11 +5,11 @@ To get started … just say, “Alexa, open gif guru”, to quickly link your mo
 
 Like Alexa, GIF Guru is intelligent and understands a lot of things. Here’s some example phrases gif guru would understand:
 
-“Alexa, ask gif guru to find me a gif about LeBron James”
+*“Alexa, ask gif guru to find me a gif about LeBron James”*
 
-“Alexa, tell gif guru to send me something about Ariana Grande”
+*“Alexa, tell gif guru to send me something about Ariana Grande”*
 
-“Alexa, open gif guru and search for Game of Thrones”
+*“Alexa, open gif guru and search for Game of Thrones”*
 
 From there, you’ll get a text containing a few GIF’s based on what you asked for.
 
